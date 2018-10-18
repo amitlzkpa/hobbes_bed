@@ -14,9 +14,9 @@ var Design = {};
 Design.info = {
 	"name": "Hobbes",
 	"designer": "Amit Nambiar",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"license": "MIT",
-	"short_desc": "A simple bed for common use.",
+	"short_desc": " A simple bed for all stages of life.",
 	"long_desc": "",
 	"url": null,
 	"message": "",

@@ -1,7 +1,7 @@
 ###### O-LAP Design Page
 ###### Code and design for [O-LAP](https://o-lap.com)  
 ---
-![image alt-text](image-url)
-# Name  
-###### Short description.  
+![Hobbes Hobbes Bed](https://raw.githubusercontent.com/amitlzkpa/hobbes_bed/master/design/display.jpg)
+# Hobbes  
+###### Simple bed for all stages of life.  
 ---
