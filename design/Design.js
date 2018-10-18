@@ -191,8 +191,18 @@ async function updatePts() {
 
 	
 	// 
-	var wantsheadrest = Design.inputState["headrest"];
+	var wantsheadrest = Design.inputState.headrest;
 	var headrestHtAdd = (wantsheadrest) ? 300 : 0;
+	var backExtLen = (wantsheadrest) ? 60 : 0;
+	var leanExtLen = (wantsheadrest) ? 30 : 0;
+
+	o_bs_pts[2][2] += backExtLen;
+	m_bs_pts[2][2] += backExtLen;
+	o_bs_pts_mirr[2][2] += backExtLen;
+
+	o_bk_pts[0][2] += backExtLen;
+	m_bk_pts[0][2] += backExtLen;
+	o_bk_pts_mirr[0][2] += backExtLen;
 
 	m_bk_pts[2][1] += headrestHtAdd;
 	o_bk_pts[2][1] += headrestHtAdd;
@@ -206,6 +216,33 @@ async function updatePts() {
 	o_tp_pts_mirr[1][1] += headrestHtAdd;
 
 
+	o_bs_pts[2][2] += leanExtLen;
+	m_bs_pts[2][2] += leanExtLen;
+	o_bs_pts_mirr[2][2] += leanExtLen;
+
+	o_bk_pts[0][2] += leanExtLen;
+	m_bk_pts[0][2] += leanExtLen;
+	o_bk_pts_mirr[0][2] += leanExtLen;
+	o_bk_pts[1][2] += leanExtLen * 3;
+	m_bk_pts[1][2] += leanExtLen * 3;
+	o_bk_pts_mirr[1][2] += leanExtLen * 3;
+	o_bk_pts[2][2] += leanExtLen * 6;
+	m_bk_pts[2][2] += leanExtLen * 6;
+	o_bk_pts_mirr[2][2] += leanExtLen * 6;
+
+	o_tp_pts[0][2] += leanExtLen * 6;
+	m_tp_pts[0][2] += leanExtLen * 6;
+	o_tp_pts_mirr[0][2] += leanExtLen * 6;
+	o_tp_pts[1][2] += leanExtLen * 6;
+	m_tp_pts[1][2] += leanExtLen * 6;
+	o_tp_pts_mirr[1][2] += leanExtLen * 6;
+	o_tp_pts[2][2] += leanExtLen;
+	m_tp_pts[2][2] += leanExtLen;
+	o_tp_pts_mirr[2][2] += leanExtLen;
+
+	o_st_pts[0][2] += leanExtLen;
+	m_st_pts[0][2] += leanExtLen;
+	o_st_pts_mirr[0][2] += leanExtLen;
 
 	
 	// --------------------------------------------
