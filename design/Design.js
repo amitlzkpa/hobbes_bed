@@ -122,7 +122,7 @@ function getAgeMul(age) {
 
 
 
-function updatePts() {
+async function updatePts() {
 
 	// age alterations - scale the whole design by a factor depending on age
 	var age = Design.inputState.age;
@@ -287,19 +287,7 @@ var o_ft_pts_mirr = JSON.parse(JSON.stringify(o_ft_pts_mirr_start));
  * Called on design initialization; called before UI is updated to show params.
  * Use for initializing values.
  */
-Design.init = function() {
-}
-
-/**
- * Called when any parameter is updated.
- * @param {object} params 		Object containing key-value pairs with 
- * 								code-label as specified in "Design.inputs" as 
- *								key and their updated values as values. The same
- * 								values are available in "Design.inputState".
- */
-Design.onParamChange = function(params) {
-	this.inputState = params;
-	updatePts();
+Design.init = async function() {
 }
 
 /**
@@ -310,9 +298,9 @@ Design.onParamChange = function(params) {
  *									at the end. Called after parameters are 
  *									updated
  */
-Design.updateGeom = function(group, sliceManager) {
+Design.updateGeom = async function(group, sliceManager) {
 
-
+	await updatePts();
 
 	var obj = new THREE.Object3D();
 
