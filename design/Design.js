@@ -142,10 +142,48 @@ async function updatePts() {
 	// --------------------------------------------
 
 
+	let sleepstyles = [ "tight", "comfy", "luxurious" ];
+	let ssWdAddLens = [ 0, 30, 100 ];
+	let ssHtRemLens = [ 0, 15, 40 ];
 
 	// 
 	var sleepstyle = Design.inputState["sleep-style"];
+	var ssWdAdd = ssWdAddLens[sleepstyles.indexOf(sleepstyle)];
+	var ssHtRem = ssHtRemLens[sleepstyles.indexOf(sleepstyle)];
 
+	o_bs_pts.forEach((d, i) => { d[0] += ssWdAdd; });
+	o_bk_pts.forEach((d, i) => { d[0] += ssWdAdd; });
+	o_tp_pts.forEach((d, i) => { d[0] += ssWdAdd; });
+	o_st_pts.forEach((d, i) => { d[0] += ssWdAdd; });
+	o_ft_pts.forEach((d, i) => { d[0] += ssWdAdd; });
+
+	o_bs_pts_mirr.forEach((d, i) => { d[0] -= ssWdAdd; });
+	o_bk_pts_mirr.forEach((d, i) => { d[0] -= ssWdAdd; });
+	o_tp_pts_mirr.forEach((d, i) => { d[0] -= ssWdAdd; });
+	o_st_pts_mirr.forEach((d, i) => { d[0] -= ssWdAdd; });
+	o_ft_pts_mirr.forEach((d, i) => { d[0] -= ssWdAdd; });
+
+
+	o_bk_pts[1][1] -= ssHtRem;
+	o_bk_pts[2][1] -= ssHtRem;
+	o_tp_pts.forEach((d, i) => { d[1] -= ssHtRem; });
+	o_st_pts.forEach((d, i) => { d[1] -= ssHtRem; });
+	o_ft_pts[0][1] -= ssHtRem;
+	o_ft_pts[1][1] -= ssHtRem;
+
+	m_bk_pts[1][1] -= ssHtRem;
+	m_bk_pts[2][1] -= ssHtRem;
+	m_tp_pts.forEach((d, i) => { d[1] -= ssHtRem; });
+	m_st_pts.forEach((d, i) => { d[1] -= ssHtRem; });
+	m_ft_pts[0][1] -= ssHtRem;
+	m_ft_pts[1][1] -= ssHtRem;
+
+	o_bk_pts_mirr[1][1] -= ssHtRem;
+	o_bk_pts_mirr[2][1] -= ssHtRem;
+	o_tp_pts_mirr.forEach((d, i) => { d[1] -= ssHtRem; });
+	o_st_pts_mirr.forEach((d, i) => { d[1] -= ssHtRem; });
+	o_ft_pts_mirr[0][1] -= ssHtRem;
+	o_ft_pts_mirr[1][1] -= ssHtRem;
 
 
 	
